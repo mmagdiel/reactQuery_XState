@@ -10,13 +10,12 @@ export default function One() {
   if (isError) {
     return <span>Error: {error.message}</span>;
   }
-  console.log(data);
   return (
     <div>
       <p>One</p>
       <ul>
         {data.map((item) => {
-          return <li>{item.title}</li>;
+          return <li key={item.id}>{item.title}</li>;
         })}
       </ul>
     </div>
